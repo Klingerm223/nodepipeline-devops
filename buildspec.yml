@@ -22,7 +22,8 @@ phases:
       - echo Pushing the Docker images...
       - docker push 597000290781.dkr.ecr.us-east-1.amazonaws.com/nodepipeline-devops-pucrs:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"nodepipeline-devops-pucrs","imageUri":"%s"}]' 597000290781.dkr.ecr.us-east-1.amazonaws.com/nodepipeline-devops-pucrs:latest > imagedefinitions.json
+      - printf '[{"name":"nodepipeline-devops-avancado-cluster-ecs","imageUri":"%s"}]' 597000290781.dkr.ecr.us-east-1.amazonaws.com/nodepipeline-devops-pucrs:latest > imagedefinitions.json
+      #- printf '[{"name":"nodepipeline-devops-pucrs","imageUri":"%s"}]' 597000290781.dkr.ecr.us-east-1.amazonaws.com/nodepipeline-devops-pucrs:latest > imagedefinitions.json
       - cat imagedefinitions.json 
 artifacts:
     files: 
